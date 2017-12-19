@@ -1,0 +1,39 @@
+﻿<h1>Weather forecast Post Data Based On Email Validation</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+<!--<div>{{forecasts| json}}</div>-->
+<!--<p *ngIf="!forecasts"><em>Loading...</em></p>-->
+
+<table>
+    <tr>
+        <td>userName:</td>
+        <td><input type="text" [(ngModel)]="emailModel.userName" placeholder="Enter Username" /></td>
+    </tr>
+    <tr>
+        <td>EmailId:</td>
+        <td><input type="text" [(ngModel)]="emailModel.emailId" placeholder="Enter Email Id" /></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="button" (click)="ValidateEmailID()" value="GetWeatherData" /></td>
+    </tr>
+</table>
+
+<table class='table' *ngIf="forecasts">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Temp. (C)</th>
+            <th>Temp. (F)</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let forecast of forecasts">
+            <td>{{ forecast.DateFormatted }}</td>
+            <td>{{ forecast.TemperatureC }}</td>
+            <td>{{ forecast.TemperatureF }}</td>
+            <td>{{ forecast.Summary }}</td>
+        </tr>
+    </tbody>
+</table>

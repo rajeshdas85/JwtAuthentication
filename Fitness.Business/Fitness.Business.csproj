@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fitness.Business.Interfaces\Fitness.Business.Interfaces.csproj" />
+    <ProjectReference Include="..\Fitness.Entities\Fitness.Entities.csproj" />
+    <ProjectReference Include="..\Fitness.Repository.Interfaces\Fitness.Repository.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

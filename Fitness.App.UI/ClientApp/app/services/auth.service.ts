@@ -20,7 +20,6 @@ export class AuthService {
         this.localUrl = originUrl;
     }
     login(userName: string, password: string): Promise<ResponseResult> {
-
         let data = {
             "userName": userName,
             "password": password
